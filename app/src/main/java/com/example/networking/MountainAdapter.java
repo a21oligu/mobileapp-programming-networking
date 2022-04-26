@@ -10,14 +10,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MountainAdapter extends RecyclerView.Adapter<MountainAdapter.ViewHolder> {
-    private List<MountainListItem> mountains;
+    private ArrayList<MountainListItem> mountains;
     private LayoutInflater layoutInflater;
     private OnClickListener onClickListener;
 
-    public MountainAdapter(Context context, List<MountainListItem> mountains, OnClickListener onClickListener) {
+    public MountainAdapter(Context context, ArrayList<MountainListItem> mountains, OnClickListener onClickListener) {
         this.layoutInflater = LayoutInflater.from(context);
         this.mountains = mountains;
         this.onClickListener = onClickListener;
@@ -50,7 +51,7 @@ public class MountainAdapter extends RecyclerView.Adapter<MountainAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.getTextView().setText(mountains.get(position).getTitle());
+        holder.getTextView().setText(mountains.get(position).getName());
     }
 
     @Override

@@ -1,13 +1,13 @@
 package com.example.networking;
 
 public class MountainListItem {
-    private String title;
+    private String name;
 
-    public MountainListItem(String title) {
-        this.title = title;
+    public MountainListItem(String name) {
+        this.name = name;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 }
